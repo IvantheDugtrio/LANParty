@@ -1,0 +1,54 @@
+Raspberry Pi network audio player options
+
+Raspberry Pi can simply run a web server with various songs preloaded on the 
+SD card. However this can be limiting so using a web service such as Spotify 
+may be preferred. 
+
+The following methods are useful if the audio server and/or controller cannot 
+be the renderer. This is the case with using Spotify since the Pi does not 
+have flash player for use with its web browser. 
+
+Methods of streaming audio to the Pi
+
+1. 	Pulse Audio 
+	
+	Pros -
+	Easy to set up
+	Low Latency
+
+	Cons -
+	Suffers audio distortion from packet loss
+	Not designed for network use 
+
+2. 	UPnP AV Media (DLNA) Server/Renderer
+	
+	Pros -
+	Fairly easy to set up
+	Uses DLNA standard
+	High fidelity audio
+	Medium Latency (~500ms)
+
+	Cons -
+	Hard to find media players that can search DLNA renderers on the network (BubbleUPnP on Android)
+
+
+3.	AirPlay using Shairport
+	
+	Pros -
+	Easy to set up and use
+	Works with all Apple devices (the servers)
+	High fidelity audio
+
+	Cons -
+	High Latency (~1-2 seconds)
+	
+4. 	Bluetooth audio device
+	
+	Pros -
+	Very portable
+	Easy to configure from a master controller
+	High quality/Low latency audio
+
+	Cons - 
+	May be difficult to integrate with a web server jukebox
+Source: http://rootprompt.apatsch.net/2013/03/07/raspberry-pi-network-audio-player-pulseaudio-dlna-and-bluetooth-a2dp-part-2-dlna/
